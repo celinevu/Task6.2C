@@ -59,14 +59,6 @@ post {
                  subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
                  body: "Check console output at ${env.BUILD_URL} to view the results."
         }
-    always {
-        emailext (
-            subject: "Jenkins Build Status: ${currentBuild.currentResult}",
-            body: """<p>Check out the build details at <a href="${BUILD_URL}">${BUILD_URL}</a></p>""",
-            recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-            attachLog: true
-        )
     }
-
 
 }
