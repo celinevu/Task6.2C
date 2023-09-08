@@ -47,8 +47,9 @@ pipeline {
                 echo "Deploying the code to the production environment: ${env.PRODUCTION_ENVIRONMENT}"
             }
         }
+    }
     
-post {
+    post {
         success {
             mail to: 'diepanhv.neu@gmail.com',
                  subject: "Pipeline Succeeded",
@@ -60,5 +61,4 @@ post {
                  body: "Check console output to view the results."
         }
     }
-}
 }
