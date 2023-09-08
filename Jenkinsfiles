@@ -60,5 +60,5 @@ post {
                  body: "Check console output to view the results."
         }
     }
-
+}
 }
