@@ -1,6 +1,6 @@
 pipeline {
     agent any
-hhhh
+
     environment {
         DIRECTORY_PATH = "path/to/code/directory"
         TESTING_ENVIRONMENT = "testing-env"
